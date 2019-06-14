@@ -1,6 +1,9 @@
 let gameData;
 
-function getGame(id){
+function getGame(){
+
+let id = document.getElementById("Game_id").value; 
+
 fetchData("GET", null, "games/" + id).then((value) => {
  gameData=value}).catch((err) => {
     console.log('rejected. reason:', err)});
