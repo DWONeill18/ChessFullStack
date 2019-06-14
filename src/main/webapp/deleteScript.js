@@ -1,12 +1,22 @@
-function deleteGame(){
+function deleteGame() {
 
-let id = document.getElementById("Game_id").value; 
+    let id = document.getElementById("Game_id").value;
 
-fetchData("DELETE", null, "games/" + id).then((value) => {
-    info = JSON.parse(value)}).catch((err) => {
-       console.log('rejected. reason:', err)});
-   console.log('after promise');
+    fetchData("DELETE", null, "games/" + id).then((
+        getElementById("deleteMessage").innerHTML = "Success!!"))
+        .catch((err) => {
+        console.log('rejected. reason:', err)
+    });
+    console.log('after promise');
+    console.log("ID deleted")
 
-   console.log("ID deleted")
+    // if (getGame(id) != null){
+
+    //     document.getElementById("deleteMessage").innerHTML = "Success!!"
+
+    // }
+    // else{
+    //     document.getElementById("deleteMessage").innerHTML = "Failed!!"
+    // }
 
 }
