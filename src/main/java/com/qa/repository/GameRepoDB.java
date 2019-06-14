@@ -22,8 +22,8 @@ public class GameRepoDB implements GameRepo{
 	}
 
 	public Game readGame(int id) {
-		// TODO Auto-generated method stub
-		return null;
+		Game game = manager.find(Game.class, id);
+		return game;
 	}
 	
 	public List<Game> readAll() {
