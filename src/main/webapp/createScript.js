@@ -12,9 +12,9 @@ function submitCreate(){
     request.open("POST", "api/games/");
     request.setRequestHeader("content-type", "application/json");
 
-    req.onreadystatechange = () => {
-        if (req.readyState === 4) {
-            if (req.status >= 200 && req.status < 300) {
+    request.onreadystatechange = () => {
+        if (request.readyState === 4) {
+            if (request.status >= 200 && request.status < 300) {
                 document.getElementById("message").innerHTML = "Success!!"
             }
             else {
