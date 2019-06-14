@@ -19,9 +19,8 @@ import javax.ws.rs.core.UriInfo;
 import javax.ws.rs.core.Response.Status;
 
 import com.qa.model.Game;
-import com.qa.model.Player;
 import com.qa.repository.GameRepo;
-import com.qa.repository.PlayerRepo;
+
 
 @Path("/")
 public class GameEnd {

@@ -30,15 +30,18 @@ public class GameRepoDB implements GameRepo{
 		// TODO Auto-generated method stub
 		return null;
 	}
-
-	public Game updateGame(int game_id, Game newGame) {
-		// TODO Auto-generated method stub
-		return null;
+	
+	@Transactional(value = TxType.REQUIRED)
+	public Game updateGame(int game_id, Game newInfo) {
+		Game game = readGame(game_id);
+		game.setWhite(newInfo.getWhite());
+		System.out.println(readGame(game.getGame_id()).getWhite());
+		return game;
 	}
 
+	@Transactional(value = TxType.REQUIRED)
 	public void deleteGame(int game_id) {
-		// TODO Auto-generated method stub
-		
+		manager.remove(readGame(game_id));
 	}
 	
 	
