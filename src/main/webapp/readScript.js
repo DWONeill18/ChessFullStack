@@ -9,7 +9,7 @@ fetchData("GET", null, "games/" + id).then((value) => {
     console.log('rejected. reason:', err)});
 console.log('after promise');
 
-let info = JSON.parse(value.responseText);
+let info = JSON.parse(gameData.responseText);
 
 document.getElementById("Game_id").innerText = info;
 document.getElementById("White").innerText = info;
