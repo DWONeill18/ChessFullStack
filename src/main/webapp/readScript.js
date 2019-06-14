@@ -11,7 +11,7 @@ fetchData("GET", null, "games/" + id).then((value) => {
     document.getElementById("Black").value = info.black;
     document.getElementById("Result").value = info.result;
     document.getElementById("Eco").value = info.eco;
-    document.getElementById("notation").value = info.notation;     
+    document.getElementById("Notation").value = info.notation;     
 }).catch((err) => {
        console.log('rejected. reason:', err)});
    console.log('after promise');
