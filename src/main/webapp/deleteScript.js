@@ -3,7 +3,7 @@ function deleteGame() {
     let id = document.getElementById("Game_id").value;
 
     fetchData("DELETE", null, "games/" + id).then((
-        getElementById("deleteMessage").innerHTML = "Success!!"))
+        document.getElementById("deleteMessage").innerHTML = "Success!!"))
         .catch((err) => {
         console.log('rejected. reason:', err)
     });
