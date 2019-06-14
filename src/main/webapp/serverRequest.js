@@ -18,7 +18,6 @@ function fetchData(method, textbody, url) {
         req.send(textbody);
     });
 }
-
 console.log('before promise');
 
 
