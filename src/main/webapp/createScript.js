@@ -11,6 +11,18 @@ function submitCreate(){
     let request = new XMLHttpRequest();
     request.open("POST", "api/games/");
     request.setRequestHeader("content-type", "application/json");
+
+    req.onreadystatechange = () => {
+        if (req.readyState === 4) {
+            if (req.status >= 200 && req.status < 300) {
+                document.getElementById("message").innerHTML = "Success!!"
+            }
+            else {
+                document.getElementById("message").innerHTML = "Fail!!"
+            }
+        }
+    };
+
     request.send(json);
 
 }
