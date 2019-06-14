@@ -44,7 +44,7 @@
     <a href="index.html" class="btn btn-secondary btn-lg" role="button" aria-pressed="true">Home</a>
     <a href="about.html" class="btn btn-secondary btn-lg" role="button" aria-pressed="true">About Chess</a>
     <a href="champions.html" class="btn btn-secondary btn-lg" role="button" aria-pressed="true">World Champions</a>
-    <a href="create.html" class="btn btn-secondary btn-lg disabled" role="button" aria-pressed="true">Login</a>
+    <a href="create.html" class="btn btn-secondary btn-lg disabled" role="button" aria-pressed="true">Create</a>
     <a href="contact.html" class="btn btn-lg btn-secondary">Contact</a>
 
 
@@ -61,11 +61,14 @@
     </main>
 
 
-    <input type="text" placeholder="White"></input>
-    <input type="text" placeholder="Black"></input>
-    <input type="text" placeholder="Result"></input>
-    <input type="text" placeholder="Eco"></input>
-    <textarea placeholder="Notation"></textarea>
+    <input type="text" placeholder="White" id="White"></input>
+    <input type="text" placeholder="Black" id="Black"></input>
+    <input type="text" placeholder="Result" id="Result"></input>
+    <input type="text" placeholder="Eco" id="Eco"></input>
+    <br>
+    <textarea placeholder="Notation" id="Notation"></textarea>
+    <br>
+    <button onclick="submitCreate()"></button>
 
     <footer class="mastfoot mt-auto">
       <div class="inner">
