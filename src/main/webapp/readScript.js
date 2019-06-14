@@ -24,7 +24,7 @@ console.log('before promise');
 let gameData;
 
 function getGame(){
-fetchData("GET", null, "games").then((value) => {
+fetchData("GET", document.getElementById=("Game_id").value, "games").then((value) => {
  gameData=value}).catch((err) => {
     console.log('rejected. reason:', err)});
 console.log('after promise');
