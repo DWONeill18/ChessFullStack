@@ -5,12 +5,14 @@ function getGame(){
 let id = document.getElementById("Game_id").value; 
 
 fetchData("GET", null, "games/" + id).then((value) => {
-    gameData = value}).catch((err) => {
+    info = JSON.parse(value)
+    document.getElementById("Game_id").innerText = info.game_id;
+    document.getElementById("White").innerText = info.white;
+    document.getElementById("Black").innerText = info.black;
+    document.getElementById("Result").innerText = info.result;
+}).catch((err) => {
        console.log('rejected. reason:', err)});
    console.log('after promise');
 
-document.getElementById("Game_id").innerText = info;
-document.getElementById("White").innerText = info;
-document.getElementById("Black").innerText = info;
-document.getElementById("Result").innerText = info;
+
 }
