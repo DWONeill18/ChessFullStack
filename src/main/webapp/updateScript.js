@@ -2,7 +2,19 @@ function updateGame() {
 
     let body = {};
     let id = document.getElementById("Game_id").value;
-    body.white = document.getElementById("White").value;
+
+    
+    if (document.getElementById("White").value !== null){
+        body.white = document.getElementById("White").value;
+    }
+    else {
+        
+        fetchData("GET", null, "games/" + id).then((value) => {
+            info = JSON.parse(value)        
+            document.getElementById("White").value = info.white;
+
+        });
+    
     body.black = document.getElementById("Black").value;
     body.result = document.getElementById("Result").value;
     body.eco = document.getElementById("Eco").value;
