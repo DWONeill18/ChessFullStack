@@ -57,11 +57,25 @@
       <h1> </h1>
       <p class="lead">
 
-        update page
+        update page updated
 
       </p>
 
     </main>
+
+    <div id="inputs">
+      <input type="text" placeholder="Game_id" id="Game_id"></input>
+      <input type="text" placeholder="White" id="White"></input>
+      <input type="text" placeholder="Black" id="Black"></input>
+      <input type="text" placeholder="Result" id="Result"></input>
+      <input type="text" placeholder="Eco" id="Eco"></input>
+      <input type="text" placeholder="Notation" id="Notation"></input>
+      <br>
+      <br>              
+<button onclick="updateGame()">Submit</button>
+<br>
+<div id="updateMessage"/>
+</div>
 
 
 
@@ -73,7 +87,8 @@
   </div>
   </div>
 
- <script src="createScript.js"></script>
+ <script src="updateScript.js"></script>
+ <script src="serverRequest.js"></script>
 
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
     integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
