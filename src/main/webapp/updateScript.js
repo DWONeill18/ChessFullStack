@@ -4,7 +4,7 @@ function updateGame() {
     let id = document.getElementById("Game_id").value;
 
     
-    if (document.getElementById("White").value !== null){
+    if (document.getElementById("White").value !== ""){
         body.white = document.getElementById("White").value;
     }
     else {
