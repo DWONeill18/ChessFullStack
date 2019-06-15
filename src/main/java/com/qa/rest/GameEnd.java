@@ -65,11 +65,11 @@ public class GameEnd {
 	@Produces(MediaType.APPLICATION_JSON)
 	@Consumes({"application/json"})
 	@Path("/games/{id}")
-	public Response updateGame(Game game, @PathParam("id") int game_id) {
-		if (gameRepo.readGame(game_id).equals(null)){
+	public Response updateGame(Game game, @PathParam("id") int id) {
+		if (gameRepo.readGame(id).equals(null)){
 			return Response.status(Status.NOT_FOUND).build();
 		}
-		Game gameRS2 = gameRepo.updateGame(game_id, game);
+		Game gameRS2 = gameRepo.updateGame(id, game);
 		return Response.ok(gameRS2).build();
 	}
 	

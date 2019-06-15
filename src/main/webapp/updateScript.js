@@ -1,8 +1,12 @@
 function updateGame() {
 
+    let body = {};
     let id = document.getElementById("Game_id").value;
+    body.white = document.getElementById("White").value;
 
-    fetchData("PUT", null, "games/" + id).then((
+    let json = JSON.stringify(body);
+
+    fetchData("PUT", json, "games/" + id).then((
         document.getElementById("updateMessage").innerHTML = "Success!!"))
         .catch((err) => {
         console.log('rejected. reason:', err)
