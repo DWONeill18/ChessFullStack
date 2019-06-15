@@ -17,11 +17,11 @@ function findGame() {
     fetchData("GET", null, "games/" + id).then((value) => {
         sessionStorage.setItem("userData", value);
         let body = JSON.parse(value);
-        body.white = document.getElementById("White").value;
-        body.black = document.getElementById("Black").value;
-        body.result = document.getElementById("Result").value;
-        body.eco = document.getElementById("Eco").value;
-        body.notation = document.getElementById("Notation").value;
+        document.getElementById("White").value = body.white;
+        document.getElementById("Black").value = body.black;
+        document.getElementById("Result").value = body.result;
+        document.getElementById("Eco").value =  body.eco;
+        document.getElementById("Notation").value = body.notation;
     }).catch((err) => {
         console.log('rejected. reason:', err)
     });
