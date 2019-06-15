@@ -33,4 +33,3 @@ function updateGame() {
     console.log("record updated");
 
 }
-}
