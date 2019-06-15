@@ -51,7 +51,7 @@ function updateGame() {
 
     fetchData("PUT", json, "games/" + id).then(() => {
         document.getElementById("updateMessage").innerHTML = "Success!!";
-        setTimeout(() => {getElementById("updateMessage").innerHTML = " ";}, 5000);
+        setTimeout(() => {document.getElementById("updateMessage").innerHTML = " ";}, 5000);
 })
             .catch ((err) => {
     console.log('rejected. reason:', err)
