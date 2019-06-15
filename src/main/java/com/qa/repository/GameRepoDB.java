@@ -36,6 +36,14 @@ public class GameRepoDB implements GameRepo{
 		Game game = readGame(game_id);
 		game.setWhite(newInfo.getWhite());
 		System.out.println(readGame(game.getGame_id()).getWhite());
+		game.setBlack(newInfo.getBlack());
+		System.out.println(readGame(game.getGame_id()).getBlack());
+		game.setResult(newInfo.getResult());
+		System.out.println(readGame(game.getGame_id()).getResult());
+		game.setEco(newInfo.getEco());
+		System.out.println(readGame(game.getGame_id()).getEco());
+		game.setNotation(newInfo.getNotation());
+		System.out.println(readGame(game.getGame_id()).getNotation());
 		return game;
 	}
 
