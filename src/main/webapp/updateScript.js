@@ -12,8 +12,10 @@ function updateGame() {
         fetchData("GET", null, "games/" + id).then((value) => {
             info = JSON.parse(value)        
             document.getElementById("White").value = info.white;
-
-        });
+        }).catch((err) => {
+            console.log('rejected. reason:', err)});
+        console.log('after promise');
+        }
     
     body.black = document.getElementById("Black").value;
     body.result = document.getElementById("Result").value;
@@ -31,5 +33,4 @@ function updateGame() {
     console.log("record updated");
 
 }
-
 }
