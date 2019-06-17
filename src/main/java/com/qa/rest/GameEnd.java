@@ -57,7 +57,7 @@ public class GameEnd {
 	@Path("/games")
 	public Response createGame(Game gameRS, @Context UriInfo uriInfo) {
 		gameRS = gameRepo.createGame(gameRS);
-		URI createdURI = uriInfo.getBaseUriBuilder().path(""+gameRS.getGame_id()).build();
+		URI createdURI = uriInfo.getBaseUriBuilder().path("/games/"+gameRS.getGame_id()).build();
 		System.out.println(createdURI);
 		return Response.ok(createdURI.toString()).status(Status.CREATED).build();
 	}
