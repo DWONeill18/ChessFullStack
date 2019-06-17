@@ -8,6 +8,6 @@ function deleteGame() {
         console.log('rejected. reason:', err)
     });
     console.log('after promise');
-    console.log("ID deleted")
+    console.log("ID deleted");
 
 }
