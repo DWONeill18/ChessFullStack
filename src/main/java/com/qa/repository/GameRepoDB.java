@@ -10,11 +10,11 @@ import javax.transaction.Transactional.TxType;
 import com.qa.model.Game;
 
 @Transactional(TxType.SUPPORTS)
-public class GameRepoDB implements GameRepo{
-	
+public class GameRepoDB implements GameRepo {
+
 	@PersistenceContext(unitName = "myPU")
 	EntityManager manager;
-	
+
 	@Transactional(TxType.REQUIRED)
 	public Game createGame(Game game) {
 		manager.persist(game);
@@ -25,12 +25,11 @@ public class GameRepoDB implements GameRepo{
 		Game game = manager.find(Game.class, id);
 		return game;
 	}
-	
+
 	public List<Game> readAll() {
-		// TODO Auto-generated method stub
 		return null;
 	}
-	
+
 	@Transactional(value = TxType.REQUIRED)
 	public Game updateGame(int game_id, Game newInfo) {
 		Game game = readGame(game_id);
@@ -51,8 +50,5 @@ public class GameRepoDB implements GameRepo{
 	public void deleteGame(int game_id) {
 		manager.remove(readGame(game_id));
 	}
-	
-	
-	
 
 }
