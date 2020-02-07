@@ -56,6 +56,7 @@ To run the project make sure the following have been met:
 MyChessGame Viewer is an interactive online chessgame database viewer which 
 allows the User to add and view their own games so they can play through them on a board.
 
+Note: NO LONGER HOSTED ON GCP SO CANNOT BE ACCESSED HERE!
 It can accessed from anywhere using the IP address: http://35.242.174.17:8080/ChessDatabaseAPI-1.0/index.html
 
 The create function allows the user to add a game to the MyChessGame Viewer Database.
